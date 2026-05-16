@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakim Ullah — MERN Stack Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== BACKGROUND ELEMENTS ===== -->
+    <div class="bg-grid"></div>
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+    <div id="progress"></div>
+
+    <!-- ===== LOADER ===== -->
+    <div id="loader">
+        <div class="loader-name">
+            <span id="loader-text"></span>
+        </div>
+        <div class="loader-bar">
+            <div class="loader-fill" id="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+        <div class="nav-logo">HU.</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-btn" id="themeBtn" title="Toggle theme">🌙</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MOBILE NAVIGATION ===== -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#hero" onclick="closeMobileNav()">Home</a>
+        <a href="#about" onclick="closeMobileNav()">About</a>
+        <a href="#skills" onclick="closeMobileNav()">Skills</a>
+        <a href="#projects" onclick="closeMobileNav()">Projects</a>
+        <a href="#services" onclick="closeMobileNav()">Services</a>
+        <a href="#experience" onclick="closeMobileNav()">Experience</a>
+        <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero">
+        <div class="hero-left">
+            <div class="hero-greeting">👋 Welcome to my portfolio</div>
+            <h1 class="hero-name">
+                <span class="word">Hakim&nbsp;</span><span class="word">Ullah</span>
+            </h1>
+            <div class="hero-role">
+                <span class="role-text" id="roleText">MERN Stack Developer</span>
+            </div>
+            <p class="hero-desc">
+                Building modern, scalable web applications with the full power of MongoDB, Express, React, and Node.js. 
+                Crafting digital experiences that are fast, beautiful, and production-ready.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">✉️ Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-img-wrap">
+                <div class="hero-img-bg"></div>
+                <img src="https://res.cloudinary.com/dbeotyvpg/image/upload/q_auto/f_auto/v1778910389/5_qzp4lv.png" alt="Hakim Ullah" class="hero-img">
+                <div class="hero-badge badge-top">
+                    <span class="badge-dot"></span>
+                    Available for freelance
+                </div>
+                <div class="hero-badge badge-bottom">
+                    <span>⚡</span> 3+ Years Experience
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            Scroll to explore
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+        <div class="about-img-wrap reveal">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=625&fit=crop" 
+                 alt="Hakim Ullah working" class="about-img">
+            <div class="about-decor"></div>
+        </div>
+        <div>
+            <div class="section-label reveal">About Me</div>
+            <h2 class="section-title reveal">Passionate about<br>building the web</h2>
+            <p style="color:var(--text2);line-height:1.8;font-size:.95rem" class="reveal">
+                I'm <strong style="color:var(--text)">Hakim Ullah</strong>, a dedicated MERN Stack Web Developer based in Pakistan. 
+                I specialize in crafting full-stack web applications using MongoDB, Express.js, React.js, and Node.js — 
+                turning complex ideas into smooth, scalable digital products.
+            </p>
+            <p style="color:var(--text2);line-height:1.8;font-size:.95rem;margin-top:16px" class="reveal">
+                From RESTful APIs and database architecture to pixel-perfect UIs and state management, 
+                I handle every layer of the stack with precision and care. My goal is to deliver not just working code, 
+                but exceptional user experiences.
+            </p>
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <span class="stat-num" data-target="30">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="3">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="20">0</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="100">0</span>
+                    <span class="stat-label">% Dedication</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills">
+        <div style="text-align:center;max-width:600px;margin:0 auto 0">
+            <div class="section-label reveal" style="justify-content:center">Technical Skills</div>
+            <h2 class="section-title reveal">My Expertise</h2>
+            <p style="color:var(--text2);font-size:.95rem;line-height:1.7" class="reveal">
+                Proficient across the full MERN stack with strong fundamentals in both frontend and backend development.
+            </p>
+        </div>
+        <div class="skills-grid">
+            <!-- Skill Cards -->
+            <div class="skill-card reveal" data-skill="90">
+                <div class="skill-icon">🌐</div>
+                <div class="skill-name">HTML5</div>
+                <div class="skill-desc">Semantic markup, accessibility best practices, and modern HTML features.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">90%</div>
+            </div>
+            <div class="skill-card reveal" data-skill="88">
+                <div class="skill-icon">🎨</div>
+                <div class="skill-name">CSS3 & Tailwind</div>
+                <div class="skill-desc">Advanced layouts, animations, responsive design, and modern CSS frameworks.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">88%</div>
+            </div>
+            <div class="skill-card reveal" data-skill="92">
+                <div class="skill-icon">⚡</div>
+                <div class="skill-name">JavaScript (ES6+)</div>
+                <div class="skill-desc">Modern JS, async/await, closures, DOM manipulation, and design patterns.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">92%</div>
+            </div>
+            <div class="skill-card reveal" data-skill="90">
+                <div class="skill-icon">⚛️</div>
+                <div class="skill-name">React.js</div>
+                <div class="skill-desc">Hooks, Context API, Redux, React Router, and component architecture.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">90%</div>
+            </div>
+            <div class="skill-card reveal" data-skill="85">
+                <div class="skill-icon">🟢</div>
+                <div class="skill-name">Node.js</div>
+                <div class="skill-desc">Server-side JavaScript, event-driven architecture, and performance optimization.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">85%</div>
+            </div>
+            <div class="skill-card reveal" data-skill="87">
+                <div class="skill-icon">🚂</div>
+                <div class="skill-name">Express.js</div>
+                <div class="skill-desc">RESTful APIs, middleware, authentication, and server architecture.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">87%</div>
+            </div>
+            <div class="skill-card reveal" data-skill="83">
+                <div class="skill-icon">🍃</div>
+                <div class="skill-name">MongoDB</div>
+                <div class="skill-desc">NoSQL database design, Mongoose ODM, aggregation pipelines, and indexing.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">83%</div>
+            </div>
+            <div class="skill-card reveal" data-skill="88">
+                <div class="skill-icon">🐙</div>
+                <div class="skill-name">Git & GitHub</div>
+                <div class="skill-desc">Version control, branching strategies, pull requests, and collaborative workflows.</div>
+                <div class="skill-bar"><div class="skill-fill"></div></div>
+                <div class="skill-pct">88%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px">
+            <div>
+                <div class="section-label reveal">Portfolio</div>
+                <h2 class="section-title reveal">Featured Projects</h2>
+            </div>
+            <p style="color:var(--text2);font-size:.9rem;max-width:300px" class="reveal">
+                A selection of my best work across full-stack development.
+            </p>
+        </div>
+        <div class="projects-grid">
+            <!-- Project Cards -->
+            <div class="project-card reveal" onclick="openModal('ecommerce')">
+                <div class="project-img-placeholder"> <img src="https://res.cloudinary.com/dbeotyvpg/image/upload/q_auto/f_auto/v1778914327/ecommerce_sgnhf9.png" alt="" style="height: 200px;">  </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span>
+                    </div>
+                    <div class="project-name">E-Commerce Platform</div>
+                    <div class="project-desc">Modern eCommerce platform with product management, smart cart system, secure Stripe payments, customer authentication, responsive UI, and powerful admin dashboard for seamless online store management..</div>
+                    <div class="project-links">
+                        <a href="https://nexusmega.netlify.app" class="project-link live" onclick="event.stopPropagation()">🔗 Live Demo</a>
+                        <a href="https://github.com/Hakim-ullah/Nexus-Mega-Store" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" onclick="openModal('taskapp')">
+                <div class="project-img-placeholder"> <img src="https://res.cloudinary.com/dbeotyvpg/image/upload/q_auto/f_auto/v1778914327/gym_qjlesw.png" alt="" style="height: 200px;">   </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">React</span><span class="tag">Express</span><span class="tag">JWT Auth</span>
+                    </div>
+                    <div class="project-name">Fitness & Gym Management Platform</div>
+                    <div class="project-desc">A powerful fitness platform with workout programs, trainer profiles, membership plans, progress tracking, and real-time updates for a modern gym experience.</div>
+                    <div class="project-links">
+                        <a href="https://apyxgym.netlify.app" class="project-link live" onclick="event.stopPropagation()">🔗 Live Demo</a>
+                        <a href="https://github.com/Hakim-ullah/Apyx-Gym" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" onclick="openModal('blog')">
+                <div class="project-img-placeholder"> <img src="https://res.cloudinary.com/dbeotyvpg/image/upload/q_auto/f_auto/v1778914329/veloura_mkobr9.png" alt="" style="height: 200px;">    </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">MERN</span><span class="tag">Redux</span><span class="tag">Cloudinary</span>
+                    </div>
+                    <div class="project-name">Veloura Restaurant</div>
+                    <div class="project-desc">A modern restaurant platform for Rome dining experiences featuring online reservations, elegant menu showcases, chef specials, gallery management, customer reviews, and seamless table booking.</div>
+                    <div class="project-links">
+                        <a href="https://velourian.netlify.app" class="project-link live" onclick="event.stopPropagation()">🔗 Live Demo</a>
+                        <a href="https://github.com/Hakim-ullah/Italian-Veloura-restaurant" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" onclick="openModal('chat')">
+                <div class="project-img-placeholder">💬</div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Socket.io</span><span class="tag">React</span><span class="tag">Node.js</span>
+                    </div>
+                    <div class="project-name">Real-Time Chat App</div>
+                    <div class="project-desc">Instant messaging application with rooms, online presence, file sharing, and message encryption.</div>
+                    <div class="project-links">
+                        <a href="#" class="project-link live" onclick="event.stopPropagation()">🔗 Live Demo</a>
+                        <a href="#" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" onclick="openModal('social')">
+                <div class="project-img-placeholder">👥</div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">MERN</span><span class="tag">WebSockets</span><span class="tag">AWS S3</span>
+                    </div>
+                    <div class="project-name">Social Media App</div>
+                    <div class="project-desc">Full social platform with posts, follows, likes, stories, and real-time notifications.</div>
+                    <div class="project-links">
+                        <a href="#" class="project-link live" onclick="event.stopPropagation()">🔗 Live Demo</a>
+                        <a href="#" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" onclick="openModal('dash')">
+                <div class="project-img-placeholder"> <img src="https://res.cloudinary.com/dbeotyvpg/image/upload/q_auto/f_auto/v1778914326/dashboard_clpul9.png" alt="" style="height: 200px;">    </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">React</span><span class="tag">Chart.js</span><span class="tag">REST API</span>
+                    </div>
+                    <div class="project-name">Analytics Dashboard</div>
+                    <div class="project-desc">Business intelligence dashboard with interactive charts, data filtering, and export capabilities.</div>
+                    <div class="project-links">
+                        <a href="https://quantuampro.netlify.app" class="project-link live" onclick="event.stopPropagation()">🔗 Live Demo</a>
+                        <a href="https://github.com/Hakim-ullah/QuanPro-Dashboard" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section id="services">
+        <div style="text-align:center;max-width:600px;margin:0 auto 0">
+            <div class="section-label reveal" style="justify-content:center">What I Offer</div>
+            <h2 class="section-title reveal">Services</h2>
+            <p style="color:var(--text2);font-size:.95rem;line-height:1.7" class="reveal">
+                End-to-end web development solutions tailored to your business needs.
+            </p>
+        </div>
+        <div class="services-grid">
+            <!-- Service Cards -->
+            <div class="service-card reveal">
+                <div class="service-num">01</div>
+                <div class="service-icon">⚡</div>
+                <div class="service-name">MERN Stack Development</div>
+                <div class="service-desc">Complete full-stack web applications built with MongoDB, Express.js, React.js, and Node.js — from architecture to deployment.</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">02</div>
+                <div class="service-icon">🎨</div>
+                <div class="service-name">Frontend Development</div>
+                <div class="service-desc">Pixel-perfect, responsive UIs with React.js, Tailwind CSS, and smooth animations that captivate users.</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">03</div>
+                <div class="service-icon">⚙️</div>
+                <div class="service-name">Backend Development</div>
+                <div class="service-desc">Scalable REST APIs, authentication systems, and database architecture with Node.js and Express.</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">04</div>
+                <div class="service-icon">🚀</div>
+                <div class="service-name">Full Stack Web Apps</div>
+                <div class="service-desc">End-to-end product development — from idea to a live, production-ready web application.</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">05</div>
+                <div class="service-icon">🛠️</div>
+                <div class="service-name">Custom Website Development</div>
+                <div class="service-desc">Bespoke websites tailored to your brand, audience, and business goals with clean, maintainable code.</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">06</div>
+                <div class="service-icon">🔧</div>
+                <div class="service-name">API Integration</div>
+                <div class="service-desc">Third-party integrations, payment gateways, cloud services, and any external API your project needs.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience">
+        <div>
+            <div class="section-label reveal">Journey</div>
+            <h2 class="section-title reveal">Experience &<br>Freelancing</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024 — Present</div>
+                <div class="timeline-title">Senior Freelance MERN Developer</div>
+                <div class="timeline-company">Upwork / Fiverr / Direct Clients</div>
+                <div class="timeline-desc">Delivering full-stack web solutions for international clients. Specializing in e-commerce platforms, SaaS products, and custom business applications using the MERN stack.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023 — 2024</div>
+                <div class="timeline-title">Full Stack Web Developer</div>
+                <div class="timeline-company">Tech Startup — Remote</div>
+                <div class="timeline-desc">Built and maintained a SaaS platform serving 500+ users. Developed RESTful APIs, implemented JWT authentication, and optimized MongoDB queries for performance.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022 — 2023</div>
+                <div class="timeline-title">Frontend Developer</div>
+                <div class="timeline-company">Digital Agency — Rawalpindi</div>
+                <div class="timeline-desc">Created responsive, high-performance React applications for 15+ clients across various industries including healthcare, retail, and education.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 — 2022</div>
+                <div class="timeline-title">Junior Web Developer</div>
+                <div class="timeline-company">Freelance Projects</div>
+                <div class="timeline-desc">Started web development journey building static websites and landing pages, gradually progressing to dynamic full-stack applications with Node.js and MongoDB.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+        <div class="contact-info">
+            <div class="section-label reveal">Get In Touch</div>
+            <h2 class="section-title reveal">Let's Work<br>Together</h2>
+            <p style="color:var(--text2);font-size:.95rem;line-height:1.8;margin-bottom:36px" class="reveal">
+                Have a project in mind? Looking for a skilled MERN Stack developer? Let's connect and build something remarkable together.
+            </p>
+            <div class="contact-detail reveal">
+                <div class="contact-icon">📧</div>
+                <div class="contact-text">
+                    <small>Email</small>
+                    <a href="mailto:hakimkhande@gmail.com">hakimkhande@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-detail reveal">
+                <div class="contact-icon">📱</div>
+                <div class="contact-text">
+                    <small>Phone / WhatsApp</small>
+                    <a href="tel:+923140837519">+92 314 083 7519</a>
+                </div>
+            </div>
+            <div class="contact-detail reveal">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                    <small>Location</small>
+                    <span style="font-size:.9rem;color:var(--text2)">Peshawar, Pakistan</span>
+                </div>
+            </div>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+            <input type="hidden" name="access_key" value="50b2aeeb-5d55-4ea4-95be-6aaaf8f24ef3">
+            <input type="checkbox" name="botcheck" style="display: none;">
+
+            <div class="contact-form reveal">
+                <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:24px">Send a Message</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="fname">First Name</label>
+                        <input class="form-input" type="text" id="fname" name="firstname" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lname">Last Name</label>
+                        <input class="form-input" type="text" id="lname" name="lastname" placeholder="Doe">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="subject">Subject</label>
+                    <input class="form-input" type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-input" id="message" name="msg" rows="5" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit" id="submitBtn" style="width:100%;justify-content:center">
+                    Send Message 🚀
+                </button>
+                <div class="form-msg" id="formMsg"></div>
+            </div>
+        </form>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-logo">Hakim Ullah.</div>
+        <p class="footer-copy">© 2025 Hakim Ullah. Built with ❤️ using MERN Stack.</p>
+        <div class="social-links">
+            <a href="https://www.github.com/Hakim-ullah/" class="social-link" title="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/Hakimullah-Successful/" class="social-link" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:hakimkhande@gmail.com" class="social-link" title="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://wa.me/923140837519" class="social-link" title="WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ===== PROJECT MODAL ===== -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" id="modalContent">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- ===== SUCCESS MESSAGE OVERLAY ===== -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-card">
+            <div class="success-icon-wrap">
+                <span class="success-icon">✓</span>
+            </div>
+            <h2 class="success-title" id="successTitle">Message Sent!</h2>
+            <p class="success-subtitle" id="successSubtitle">
+                Thank you for reaching out! I'll get back to you within 24 hours.
+            </p>
+            <div class="success-details">
+                <div class="success-detail-item">
+                    <div class="success-detail-label">Status</div>
+                    <div class="success-detail-value" style="color: var(--accent3);">✓ Delivered</div>
+                </div>
+                <div class="success-detail-item">
+                    <div class="success-detail-label">Response Time</div>
+                    <div class="success-detail-value">Within 24h</div>
+                </div>
+            </div>
+            <button class="success-close-btn" onclick="closeSuccessMessage()">
+                Awesome! ✨
+            </button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
